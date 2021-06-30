@@ -1,4 +1,13 @@
 [[package]]
+name = "asttokens"
+sections = ["default"]
+version = "2.0.5"
+summary = "Annotate AST trees with source code positions"
+dependencies = [
+    "six",
+]
+
+[[package]]
 name = "azure-functions"
 sections = ["default"]
 version = "1.2.1"
@@ -23,10 +32,22 @@ version = "7.1.2"
 summary = "Composable command line interface toolkit"
 
 [[package]]
+name = "colorama"
+sections = ["default"]
+version = "0.4.4"
+summary = "Cross-platform colored terminal text."
+
+[[package]]
 name = "dominate"
 sections = ["default"]
 version = "2.5.1"
 summary = "Dominate is a Python library for creating and manipulating HTML documents using an elegant DOM API."
+
+[[package]]
+name = "executing"
+sections = ["default"]
+version = "0.6.0"
+summary = "Get the currently executing AST node of a frame, and other information"
 
 [[package]]
 name = "feedgen"
@@ -62,6 +83,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "icecream"
+sections = ["default"]
+version = "2.1.1"
+summary = "Never use print() to debug again; inspect variables, expressions, and program execution with a single, simple function call."
+dependencies = [
+    "colorama>=0.3.9",
+    "pygments>=2.2.0",
+    "executing>=0.3.1",
+    "asttokens>=2.0.1",
+]
+
+[[package]]
 name = "idna"
 sections = ["default"]
 version = "2.9"
@@ -93,6 +126,12 @@ name = "MarkupSafe"
 sections = ["default"]
 version = "1.1.1"
 summary = "Safely add untrusted strings to HTML/XML markup."
+
+[[package]]
+name = "pygments"
+sections = ["default"]
+version = "2.9.0"
+summary = "Pygments is a syntax highlighting package written in Python."
 
 [[package]]
 name = "python-dateutil"
@@ -141,9 +180,13 @@ summary = "The comprehensive WSGI web application library."
 
 [metadata]
 lock_version = "2"
-content_hash = "sha256:028b750414828b1a6ab808da14bce47d586691f301471703cff9b6d65818feb5"
+content_hash = "sha256:c29d5bb77df1741c2675b609b4244222bb47f550015eca2654287d3b0de17f26"
 
 [metadata.files]
+"asttokens 2.0.5" = [
+    {file = "asttokens-2.0.5-py2.py3-none-any.whl", hash = "sha256:0844691e88552595a6f4a4281a9f7f79b8dd45ca4ccea82e5e05b4bbdb76705c"},
+    {file = "asttokens-2.0.5.tar.gz", hash = "sha256:9a54c114f02c7a9480d56550932546a3f1fe71d8a02f1bc7ccd0ee3ee35cf4d5"},
+]
 "azure-functions 1.2.1" = [
     {file = "azure_functions-1.2.1-py3-none-any.whl", hash = "sha256:aaa6fc16382f14a41250571b4caf92ea7e649a2aa389cfbf86d23e3a17e1d96b"},
     {file = "azure-functions-1.2.1.tar.gz", hash = "sha256:517452cce8c489c2787d02d5440997f7e6e0bb56be5afac27d391c3f26180938"},
@@ -160,9 +203,17 @@ content_hash = "sha256:028b750414828b1a6ab808da14bce47d586691f301471703cff9b6d65
     {file = "click-7.1.2-py2.py3-none-any.whl", hash = "sha256:dacca89f4bfadd5de3d7489b7c8a566eee0d3676333fbb50030263894c38c0dc"},
     {file = "click-7.1.2.tar.gz", hash = "sha256:d2b5255c7c6349bc1bd1e59e08cd12acbbd63ce649f2588755783aa94dfb6b1a"},
 ]
+"colorama 0.4.4" = [
+    {file = "colorama-0.4.4-py2.py3-none-any.whl", hash = "sha256:9f47eda37229f68eee03b24b9748937c7dc3868f906e8ba69fbcbdd3bc5dc3e2"},
+    {file = "colorama-0.4.4.tar.gz", hash = "sha256:5941b2b48a20143d2267e95b1c2a7603ce057ee39fd88e7329b0c292aa16869b"},
+]
 "dominate 2.5.1" = [
     {file = "dominate-2.5.1-py2.py3-none-any.whl", hash = "sha256:22636ad28200e75fa9e751f0511aaeb9f0b630044ed8ccbd89c27acdf3dda7a1"},
     {file = "dominate-2.5.1.tar.gz", hash = "sha256:9b05481605ea8c0afd0a98c0156a9fb78d9c406368d66b3e6fedf36920fb9d78"},
+]
+"executing 0.6.0" = [
+    {file = "executing-0.6.0-py2.py3-none-any.whl", hash = "sha256:a2f10f802b4312b92bd256279b43720271b0d9b540a0dbab7be4c28fbc536479"},
+    {file = "executing-0.6.0.tar.gz", hash = "sha256:a07046e608c56948a899e1c7dc45327ed84ee67edf245041eb8c6722658c14e3"},
 ]
 "feedgen 0.9.0" = [
     {file = "feedgen-0.9.0.tar.gz", hash = "sha256:8e811bdbbed6570034950db23a4388453628a70e689a6e8303ccec430f5a804a"},
@@ -173,6 +224,10 @@ content_hash = "sha256:028b750414828b1a6ab808da14bce47d586691f301471703cff9b6d65
 ]
 "flask-bootstrap 3.3.7.1" = [
     {file = "Flask-Bootstrap-3.3.7.1.tar.gz", hash = "sha256:cb08ed940183f6343a64e465e83b3a3f13c53e1baabb8d72b5da4545ef123ac8"},
+]
+"icecream 2.1.1" = [
+    {file = "icecream-2.1.1-py2.py3-none-any.whl", hash = "sha256:adc1c48f5a4f83b2171c774a35142f217d317a84fca8cdf3fc65aa1321ff26b6"},
+    {file = "icecream-2.1.1.tar.gz", hash = "sha256:47e00e3f4e8477996e7dc420b6fa8ba53f8ced17de65320fedb5b15997b76589"},
 ]
 "idna 2.9" = [
     {file = "idna-2.9-py2.py3-none-any.whl", hash = "sha256:a068a21ceac8a4d63dbfd964670474107f541babbd2250d61922f029858365fa"},
@@ -287,6 +342,10 @@ content_hash = "sha256:028b750414828b1a6ab808da14bce47d586691f301471703cff9b6d65
     {file = "MarkupSafe-1.1.1-cp39-cp39-win32.whl", hash = "sha256:22c178a091fc6630d0d045bdb5992d2dfe14e3259760e713c490da5323866c39"},
     {file = "MarkupSafe-1.1.1-cp39-cp39-win_amd64.whl", hash = "sha256:b7d644ddb4dbd407d31ffb699f1d140bc35478da613b441c582aeb7c43838dd8"},
     {file = "MarkupSafe-1.1.1.tar.gz", hash = "sha256:29872e92839765e546828bb7754a68c418d927cd064fd4708fab9fe9c8bb116b"},
+]
+"pygments 2.9.0" = [
+    {file = "Pygments-2.9.0-py3-none-any.whl", hash = "sha256:d66e804411278594d764fc69ec36ec13d9ae9147193a1740cd34d272ca383b8e"},
+    {file = "Pygments-2.9.0.tar.gz", hash = "sha256:a18f47b506a429f6f4b9df81bb02beab9ca21d0a5fee38ed15aef65f0545519f"},
 ]
 "python-dateutil 2.8.1" = [
     {file = "python_dateutil-2.8.1-py2.py3-none-any.whl", hash = "sha256:75bb3f31ea686f1197762692a9ee6a7550b59fc6ca3a1f4b5d7e32fb98e2da2a"},

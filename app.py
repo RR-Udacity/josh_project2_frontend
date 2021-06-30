@@ -107,6 +107,7 @@ def add_ad_request():
         'price': request.form['price']
     }
     response = requests.post(settings.API_URL + '/createAdvertisement', json=json.dumps(req_data))
+    print("json edit data: {}".format(json.dumps(req_data)))
     return redirect(url_for('home'))
 
 @app.route('/ad/update/<id>', methods=['POST'])
