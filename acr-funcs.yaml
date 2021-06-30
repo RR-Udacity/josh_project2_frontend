@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: project2funcs-deployment
+  labels:
+    app: project2funcs-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: project2funcs
+  template:
+    metadata:
+      labels:
+        app: project2funcs
+    spec:
+      containers:
+      - name: joshproject2functions
+        image: joshproject2.azurecr.io/joshproject2functions:v1
+        ports:
+        - containerPort: 80
